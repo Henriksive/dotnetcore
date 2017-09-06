@@ -13,9 +13,11 @@ namespace dotnetcore_hoved.services
 	{
         private List<Middag> middager = new List<Middag>()
         {
-            new Middag("Pølse i brød"),
-            new Middag("Vegetarwok"),
-            new Middag("Hamburger")
+            new Middag("Pølse i brød", 1),
+            new Middag("Vegetarwok", 2),
+            new Middag("Hamburger", 3),
+            new Middag("Fiskegrateng", 3),
+            new Middag("Kjøttboller og potetstappe", 2)
         };
 		public Middag GetRandom()
 		{
