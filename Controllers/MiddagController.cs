@@ -17,14 +17,11 @@ namespace dotnetcore_hoved.Controllers
             _middagService = middagService;
         }
 
-
         [HttpGet]
         [Route("random")]
         public JsonResult Random()
         {
             return Json(_middagService.GetRandom());
         }
-
-
     }
 }
