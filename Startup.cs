@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dotnetcore_hoved.options;
 using dotnetcore_hoved.services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +27,8 @@ namespace dotnetcore
         {
             services.AddMvc();
             services.AddSingleton<IMiddagService, MiddagService>();
+            services.AddSingleton<IDatabaseService, DatabaseService>();
+            services.Configure<MyOptions>(Configuration.GetSection("ConnectionStrings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
