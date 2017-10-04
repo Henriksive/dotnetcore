@@ -19,7 +19,7 @@ namespace dotnetcore_hoved.services
         }
 		public string GetSomething()
 		{
-			 return _options.TorpedoHoved;
+			 return "Not implemented";
 		}
 	}
 }
